@@ -19,12 +19,7 @@ int p(int x){
             left = left - A[i];
         }
     }
-    if(people <= k){
-        return 1;
-    }
-    else{
-        return 0;
-    }
+    return (people <= k);
 }
 
 int main(){
@@ -34,7 +29,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = 1000000001;
+  ub = 1000000000;
   while(ub - lb > 1){
       int mid = (lb + ub) / 2;
       if(p(mid)){

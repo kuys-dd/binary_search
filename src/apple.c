@@ -9,12 +9,7 @@ int p(int x){
     for(i = 0; i < n; i++){
         bag = bag + ((A[i] - 1) / x) + 1;
     }
-    if (bag <=  k){
-        return 1;
-    }
-    else{
-        return 0;
-    }
+    return (bag <= k);
 }
 
 int main(){
@@ -24,7 +19,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = 1000000001;
+  ub = 1000000000;
   while(ub - lb > 1){
       int mid = (lb + ub) / 2;
       if(p(mid)){
